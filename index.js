@@ -38,7 +38,15 @@ class Route {
     return horizontalBlocks + verticalBlocks;
   }
 
-  estimatedTime() {
+  estimatedTime(peakHours=false) {
+    let totalTime = 0
     
+    if (peakHours === true) {
+      totalTime = this.blocksTravelled() / 2;
+    } else if (peakHours === false) {
+      totalTime = this.blocksTravelled() / 3;
+    }
+    
+    return totalTime;
   }
 }
