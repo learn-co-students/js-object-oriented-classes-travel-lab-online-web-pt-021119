@@ -31,6 +31,7 @@ describe('Route', function() {
         { horizontal: 'Park', vertical: '34' },
         { horizontal: 'Park', vertical: '45' }
       );
+      // debugger;
       expect(route.blocksTravelled()).to.equal(11);
     });
 
